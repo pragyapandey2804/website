@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+</head>
+<body>
+    <h1>User List</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tenement ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for User in users %}
+                <tr>
+                    <td>{{ User.tenement_id }}</td>
+                    <td>{{ User.name }}</td>
+                    <td>{{ User.email }}</td>
+                    <td>{{ User.phone_number }}</td>
+                    <td>{{ User.password }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+   
+</body>
+</html>
+

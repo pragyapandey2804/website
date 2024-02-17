@@ -1,0 +1,215 @@
+  <!-- <html>
+    <head>
+        <title>Signup Page</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+            }
+            button{
+                background-color: #4CAF50;
+                width: 25%;
+                padding: 15px;
+                color: black;
+                border: none;
+                float: center;
+                font-size: 15px;
+            }
+
+            label{
+                font-size: 20px;   
+            }
+
+            form{
+                border: 3px solid #f1f1f1;
+            }
+
+            input[type=email],input[type=text]{
+                width: 50%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid green;
+                box-sizing: border-box;
+            }
+
+            input[type=tenement_no],input[type=int]{
+                width: 50%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid green;
+                box-sizing: border-box;
+            }
+
+            input[type=radio]{
+                height: 18px;
+                width: 18px;
+            }
+
+            button:hover{
+                opacity:0.7;
+
+            }
+            .container{
+                padding: 50px;
+                background-color: white;
+            }
+
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+            }
+              
+            img.avatar {
+                width: 10%;
+                border-radius: 50%;
+            }  
+        </style>
+    </head>
+    <body>
+        <center><h1>SIGN UP PAGE</h1></center>
+        <form action="#" method="post">
+            {% csrf_token %}
+            {% load static %}
+            <center><div class="container">
+                <div class="imgcontainer">
+                    <img src="{% static 'avatar_img2.png' %}" alt="Avatar" class="avatar">
+                </div>
+                
+                
+                <label for='tenement_no'><b>Tenement_no :</b></label>
+		        <input type='int' placeholder="Enter your tenement number*" name='tenement_no' required><br><br>
+
+		        <label for='first_name'><b>First_name :</b></label>
+		        <input type='text' placeholder='Enter first member name*' name='first_name' required><br><br>
+                
+		        <label for='aadhar1'><b>Aadhar1 :</b></label>
+		        <input type='int' placeholder='Enter first member aadhar number*' name='aadhar1' required><br><br>
+
+                
+		        <label for='second_name'><b>Second_name :</b></label>
+		        <input type='text' placeholder='Enter second member name' name='second_name' ><br><br>
+                
+		        <label for='aadhar2'><b>Aadhar2 :</b></label>
+		        <input type='int' placeholder='Enter second member aadhar number' name='aadhar2' ><br><br>
+
+                
+		        <label for='third_name'><b>Third_name :</b></label>
+		        <input type='text' placeholder='Enter third member name' name='third_name' ><br><br>
+                
+		        <label for='aadhar3'><b>Aadhar3 :</b></label>
+		        <input type='int' placeholder='Enter third member aadhar number' name='aadhar3' ><br><br>
+
+                
+		        <label for='fourth_name'><b>Fourth_name :</b></label>
+		        <input type='text' placeholder='Enter fourth member name' name='fourth_name' ><br><br>
+                
+		        <label for='aadhar4'><b>Aadhar4 :</b></label>
+		        <input type='int' placeholder='Enter fourth member aadhar number' name='aadhar4' ><br><br>
+
+		        
+            	<label for ='email'><b>Email Id :</b></label>
+            	<input type="email" placeholder="Enter email*" name="email" float="right"  required><br><br>  
+
+            	<label for='password'><b>Password :</b></label>
+            	<input type="text" placeholder="Enter Password*" name="password" required><br><br> 
+
+            	<button type="submit"><b>Signup</b></button><br>     
+            	Already an accounct <a href="http://localhost:8000/login/"> Login </a>
+            </div></center>
+        </form>
+    </body>
+</html>  
+ -->
+
+ <html>
+    <head>
+        <title>Signup Page</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+            }
+            button{
+                background-color: #4CAF50;
+                width: 25%;
+                padding: 15px;
+                color: black;
+                border: none;
+                float: center;
+                font-size: 15px;
+            }
+            label{
+                font-size: 20px;
+            }
+            form{
+                border: 3px solid #f1f1f1;
+            }
+            input[type=email],input[type=text]{
+                width: 50%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid green;
+                box-sizing: border-box;
+            }
+            input[type=radio]{
+                height: 18px;
+                width: 18px;
+            }
+            button:hover{
+                opacity:0.7;
+
+            }
+            .container{
+                padding: 50px;
+                background-color: white;
+            }
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+            }
+              
+            img.avatar {
+                width: 10%;
+                border-radius: 50%;
+            }  
+        </style>
+    </head>
+    <body>
+        <center><h1>Register From</h1></center>
+
+        <form action="#" method="post">
+            {% csrf_token %}
+            {% load static %}
+            <center><div class="container">
+                <div class="imgcontainer">
+                    <img src="{% static 'avatar_img2.png' %}" alt="Avatar" class="avatar">
+                </div>
+
+                <label for='tenement_id'><b>Tenament ID : </b></label>
+		        <input type='text' placeholder="Enter your tenament id" name='tenement_id' required><br>
+
+		        <label for='name'><b>Name :</b></label>
+		        <input type='text' placeholder='Enter your name' name='name' required><br>
+		    
+            	<label for ='email'><b>Email ID :  </b></label>
+            	<input type="email" placeholder="Enter your email" name="email" float="right"  ><br> 
+
+                <label for ='phone_number'><b>Phone number :  </b></label>
+            	<input type='text' placeholder="Enter your phone number" name="phone_number" ><br> 
+
+            	<label for='password'><b>Password : </b></label>
+            	<input type="text" placeholder="Enter Password" name="password" required><br> 
+
+            	<button type="submit"><b>Signup</b></button><br>     
+            	Already an accounct <a href="http://localhost:8000/login/"> Login </a>
+            </div></center>
+        </form>
+    </body>
+</html> 
+

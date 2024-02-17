@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Select your Admin and enter your password:</h1>
+    <div class="Adminno">
+        <form id="AdminForm" action="#" method="post">
+            {% csrf_token %}
+            <label for="Admin">Select Admin:</label>
+            <select id="Admin" name="Admin">
+                <option value="Admin 1">Admin 1</option>
+                <option value="Admin 2">Admin 2</option>
+                <option value="Admin 3">Admin 3</option>
+                <option value="Admin 4">Admin 4</option>
+            </select><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <br> <br>
+            <button type="button" id="submitBtn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // Define the correct Admin IDs and passwords
+        const correctCredentials = {
+            "Admin 1": "password1",
+            "Admin 2": "password2",
+            "Admin 3": "password3",
+            "Admin 4": "password4",
+            // Add more credentials as needed
+        };
+
+        // Get form elements and submit button
+        const adminSelect = document.getElementById("Admin");
+        const passwordInput = document.getElementById("password");
+        const submitButton = document.getElementById("submitBtn");
+
+        // Add an event listener to the button for validation and redirection
+        submitButton.addEventListener("click", function () {
+            // Get user input
+            const selectedAdmin = adminSelect.value;
+            const enteredPassword = passwordInput.value;
+
+            // Check if the entered credentials match the correct values
+            if (correctCredentials.hasOwnProperty(selectedAdmin) && correctCredentials[selectedAdmin] === enteredPassword) {
+                // If the credentials match, redirect to the registration page
+                // window.location.href = "adminwelcome.html";
+
+                window.location.href ="http://localhost:8000/adminwelcome/";
+
+
+            } else {
+                // If the credentials do not match, show an alert
+                alert("Invalid credentials. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
